@@ -1,0 +1,37 @@
+\documentclass[dvipdfmx]{jsarticle}
+\input{/Users/hfunakura/preambles/jstemp.tex}
+\title{形式意味論ノート}
+\author{H.F.U. Nakura}
+\date{最終更新: \today}
+\begin{document}
+\maketitle
+
+\section{Stalnaker's idea}
+\subsection{Presupposition-free explanation}
+Stalnakerの意味論に関する仮定は次の四つである(参考:\cite{heim1992presupposition})。
+
+\begin{itemize}
+  \item 文(LF)の意味は文脈変化力(\textbf{C}ontext \textbf{C}hange \textbf{P}otential; CCP)である。
+  \item CCPは文脈(可能世界の集合)上の関数$\varphi: \mathcal{P}(W)\to \mathcal{P}(W)$である。
+  \item 前提は、CCPが$\mathcal{P}(W)$に対してdefinedであることの条件として定式化される。
+  \item 前提投射はCCPがボトムアップに合成されることの副産物として予測される。
+\end{itemize}
+
+ある文$S$のCCPを$\varphi$としよう。$\varphi$は、$S$が発話された時点での文脈$c$を引数として、$S$が発話された後の文脈$c'$を返す。変化後の文脈である$c'$は、$c$と、$S$が真であるような可能世界の集合$W_{S}$との共通部分(intersection)である。$\denote{\cdot}$を、LFからCCPへの関数(解釈関数)とすると、以上の記述は次のように表現できる。
+
+\ex.
+\begin{align*}
+  &\text{任意の文脈$c$について,}\\
+  &\denote{S}(c) = c \cap W_{S}\\
+  &\text{ただし $W_{S}=\{w\mid w\models S\}$}.
+\end{align*}
+
+\subsection{On presupposing}
+上述の枠組みで、前提はCCPがdefinedな関数であることの条件として定式化される。このことを組み入れた形で上の定義を言い直すと次のようになる。
+
+
+
+\bibliographystyle{apalike}
+\bibliography{formalsemantics.bib}
+
+\end{document}
