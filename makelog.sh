@@ -1,0 +1,1 @@
+git log --date=format-local:'%Y/%m/%d %H:%M:%S' --pretty=format:'%ai %an %s'  | python makelog.py

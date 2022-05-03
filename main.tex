@@ -1,11 +1,12 @@
-\documentclass[dvipdfmx]{jsarticle}
+\documentclass[dvipdfmx, a4paper,12pt,oneside,openany]{jsbook}
 \input{/Users/hfunakura/preambles/jstemp.tex}
 \title{形式意味論ノート}
 \author{H.F.U. Nakura}
 \date{最終更新: \today}
 \begin{document}
 \maketitle
-
+\tableofcontents
+\chapter{動的意味論 / Dynamic Semantics}
 \section{Stalnaker's idea}
 \subsection{Presupposition-free explanation}
 Stalnakerの意味論に関する仮定は次の四つである(参考:\cite{heim1992presupposition})。
@@ -29,7 +30,29 @@ Stalnakerの意味論に関する仮定は次の四つである(参考:\cite{hei
 \subsection{On presupposing}
 上述の枠組みで、前提はCCPがdefinedな関数であることの条件として定式化される。このことを組み入れた形で上の定義を言い直すと次のようになる。
 
+\chapter{疑問文の意味論 / Question Semantics}
+\section{選択的制限 selection restrictions}
+節埋め込み述語は、それがどのような文を埋め込むことができるかという観点から三つに分類される。
 
+\begin{itemize}
+  \item 応答的述語 Responsive predicates: 平叙文と疑問文のどちらも埋め込むことのできる述語(e.g. know, be certain, care)
+  \item Rogative predicates: 疑問文のみを埋め込むことができる述語(e.g. wonder)
+  \item Anti-rogative predicates: 平叙文のみを埋め込むことができる述語(e.g. believe, hope)
+\end{itemize}
+
+意味論の課題の一つは、これらのバリエーションが存在することの説明である。また、真に説明的な理論は、「どのような述語がどのような補文パターンをとるか」を予測するような理論でなければならない。後者の課題についての挑戦は\cite{theiler2019picky,mayr2019triviality}など。これらの研究では、「neg-raising predicatesはanti-rogativeである」ことが示されている。
+
+\subsection{説明すべきもの}
+節埋め込み述語に上述のバリエーションがあることを説明すること\textbf{自体}は簡単である。例えば、各述語の語彙項目に、その述語がどのような文であれば埋め込み可能かの情報をエンコードすれば良い。しかし、そのやり方では\textbf{似たような意味の述語は似たような補文パターンをとることが通言語的に観察される}ということを説明することができない。例えば\textit{know}のような意味を持つRogative predicateが想像し難いことが説明できないのである。
+
+\paragraph{選択的制限はなぜ意味論の問題になるか}
+上述の通り、述語の補文パターンと述語の意味には少なからず関係があるように思われ、このことから、述語の補文パターンは述語の語彙的意味の基づいて説明すべきという考えが支持される。
+
+\section{いくつかのアプローチ}
+節埋め込み述語の選択的制限に対する解決策は、疑問文の意味論のそれぞれの立場から、それぞれ異なる解決策が提示されている。
+
+\chapter*{変更ログ}
+\input{commitlog.tex}
 
 \bibliographystyle{apalike}
 \bibliography{formalsemantics.bib}
